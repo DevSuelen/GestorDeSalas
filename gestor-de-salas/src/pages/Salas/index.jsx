@@ -4,6 +4,7 @@ import DataTable from "react-data-table-component";
 
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { Input, Label } from "../../components/FormComponents";
 
 const Salas = () => {
 
@@ -128,7 +129,7 @@ const Salas = () => {
         <Body>
           <form onSubmit={handleSubmit(cadastrarSala)}>
             <Label>Nome</Label>
-            <Input 
+            <Input
               placeholder="Digite o nome da sala"
               {...register('sala_nome')} />
             <Label>Capacidade</Label>
@@ -219,27 +220,7 @@ const Lateral = styled.div`
   }
 `;
 
-const Label = styled.label`
-  font-size: 12px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 6px;
-  display: block;
-`;
 
-const Input = styled.input`
-  width: 100%;
-  height: 40px;
-  border: 2px solid #DDDDDD;
-  border-radius: 5px;
-  padding-left: 10px;
-  margin-bottom: 16px;
-  outline: none;
-  &:focus{
-    border-color: blueviolet;
-  }
-`;
 
 const Actions = styled.div`
   display: flex;
